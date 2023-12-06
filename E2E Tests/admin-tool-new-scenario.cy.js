@@ -84,7 +84,7 @@ describe('Admin Tool Tests', () => {
 		cy.get('div.ant-form-item:contains("Well name")').find('input[type="text"]').should('have.value', 'Integration Test Well')
 		
 		cy.get('button').contains('Delete').click()
-		cy.get('div.ant-popover-buttons').find('button').contains('Delete').click()
+		cy.get('div.ant-popover-content').find('button').contains('Delete').click()
 		
 		cy.wait(5000)
 		cy.url().should('include', '/well')
